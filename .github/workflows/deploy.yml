@@ -1,0 +1,39 @@
+name: Deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Se ejecuta cuando hay cambios en main
+    paths:
+      - '_posts/**'
+      - '_layouts/**'
+      - '_includes/**'
+      - '_config.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Ruby y Jekyll
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'  # Usa la versión más reciente de Ruby
+
+      - name: Instalar dependencias
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Generar el sitio con Jekyll
+        run: bundle exec jekyll build
+
+      - name: Desplegar en gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site  # Carpeta generada por Jekyll
+          branch: gh-pages  # Rama donde se publicará

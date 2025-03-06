@@ -10,8 +10,8 @@
 title: "Elena Lara"
 email: your-email@example.com
 description: "Mi blog personal"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://elenalara.github.io/mi-pagina" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/mi-pagina" # the subpath of your site, e.g. /blog
+url: "https://elenalara.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: elenalara_s
 
 # Exclude from processing.

@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # el workflow se ejecuta en una VM de GitHub basada en Ubuntu (porque tiene soporte nativo para Ruby)
 
     steps:
       - name: Clonar el repositorio
@@ -34,6 +34,6 @@ jobs:
       - name: Desplegar en gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  # Carpeta generada por Jekyll
+          github_token: ${{ secrets.GITHUB_TOKEN }} # lo coge automaticamente GitHub actions
+          publish_dir: ./_site  # Carpeta generada por Jekyll automaticamente, se sobrescribe cada vez
           branch: gh-pages  # Rama donde se publicará

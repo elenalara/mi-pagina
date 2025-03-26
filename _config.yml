@@ -13,6 +13,8 @@ description: "Mi blog personal"
 baseurl: "/mi-pagina" # the subpath of your site, e.g. /blog
 url: "https://elenalara.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: elenalara_s
+instagram_username: elenalara_s
+tiktok_username: elenalaras
 
 # Exclude from processing.
 # The following items will not be processed, by default.

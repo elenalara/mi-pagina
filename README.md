@@ -12,7 +12,22 @@ Este es el código fuente de mi sitio web personal, creado con [Jekyll](https://
 
 ## 📂 Estructura del Proyecto  
 
-mi-sitio/ │── _layouts/ # Plantillas para las páginas │── _includes/ # Componentes reutilizables (header, footer, etc.) │── _posts/ # Publicaciones del blog │── assets/ # Archivos estáticos como CSS y JS │── index.md # Página principal │── about.md # Página "Sobre mí" │── _config.yml # Configuración de Jekyll │── README.md # Este archivo 😃
+mi-pagina/
+│── _layouts/
+│   ├── default.html
+│   ├── post.html
+│── _includes/
+│   ├── head.html
+│   ├── header.html
+│   ├── footer.html
+│── assets/
+│   ├── css/
+│   │   ├── style.css
+│   ├── img/
+│── _posts/
+│── about.md
+│── index.md
+│── _config.yml
 
 
 ## 🛠️ Instalación y Uso  

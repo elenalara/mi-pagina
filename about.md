@@ -1,18 +1,21 @@
 ---
-layout: default
+layout: page
 title: Sobre mí
 permalink: /sobre-mi/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## Sobre mí
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+¡Hola! Soy Elena Lara
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+![Imagen sobre mí](/assets/img/mi-imagen.jpg)
 
+E
 
-[jekyll-organization]: https://github.com/jekyll
+Además de escribir, mi otra gran pasión es la música de Taylor Swift. Hace un tiempo publiqué en Lektu una pequeña antología basada en uno de los álbumes de Taylor y actualmente la estoy editando para subirla a este blog :) (¡más noticias próximamente!)
+
+Ahora mismo estoy en proceso de escribir mi primera novela sobre unos piratillas en un mundo de fantasía
+
+---
+
+Si tienes alguna pregunta, no dudes en contactarme.

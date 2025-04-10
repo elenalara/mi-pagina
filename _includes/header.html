@@ -8,19 +8,31 @@
       </div>
     
       <div class="social-icons">
-        <a href="#" class="icon twitter">&#xf099;</a> <!-- Twitter -->
-        <a href="#" class="icon instagram">&#xf16d;</a> <!-- Instagram -->
-        <a href="#" class="icon tiktok">&#xf3a9;</a> <!-- Tiktok -->
-        <a href="{{ site.baseurl }}/contacto/" class="icon mail">&#xf0e0;</a>
+        <a href="#" class="icon twitter">
+          <i class="fa-brands fa-twitter"></i> <!-- Twitter -->
+        </a>
+        <a href="#" class="icon instagram">
+          <i class="fa-brands fa-instagram"></i> <!-- Instagram -->
+        </a>
+        <a href="#" class="icon tiktok">
+          <i class="fa-brands fa-tiktok"></i> <!-- Tiktok -->
+        </a>
+        <a href="{{ site.baseurl }}/contacto/" class="icon mail">
+          <i class="fa-solid fa-envelope"></i> <!-- Correo -->
+        </a>
       </div>
     </div>
     
-    <nav>
-      <a href="{{ site.baseurl }}/">Inicio</a>
-      <a href="{{ site.baseurl }}/libros/">Libros</a>
-      <a href="{{ site.baseurl }}/sobre-mi/">Sobre mí</a>
-      <a href="{{ site.baseurl }}/blog/">Blog</a>
-      <a href="{{ site.baseurl }}/contacto/">Contacto</a>
-    </nav>    
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid justify-content-center">
+        <div class="navbar-nav">
+          <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ site.baseurl }}/">Inicio</a>
+          <a class="nav-link {% if page.url contains '/libros/' %}active{% endif %}" href="{{ site.baseurl }}/libros/">Libros</a>
+          <a class="nav-link {% if page.url contains '/sobre-mi/' %}active{% endif %}" href="{{ site.baseurl }}/sobre-mi/">Sobre mí</a>
+          <a class="nav-link {% if page.url contains '/blog/' %}active{% endif %}" href="{{ site.baseurl }}/blog/">Blog</a>
+          <a class="nav-link {% if page.url contains '/contacto/' %}active{% endif %}" href="{{ site.baseurl }}/contacto/">Contacto</a>
+        </div>
+      </div>
+    </nav>
   </div>
 </header>

@@ -1,140 +1,172 @@
-/* Estilos generales para el cuerpo de la página */
-body {
-  background-color: #fdfaf3; /* Color de fondo */
-  color: #5a3e2b; /* Color del texto principal */
-  font-family: 'Playfair Display', serif; /* Fuente principal */
-  font-size: 16px; /* Tamaño de fuente base */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh; /* Altura mínima de la pantalla completa */
+/* Variables de color */
+:root {
+  --color-background: #FFEEEB;
+  --color-text: #3E3837;
+  --color-primary: #6A3937;
+  --color-button: #3b0d11;
+  --color-link: #748386;
 }
 
-/* Contenedor principal del contenido */
-main {
+/* Estilos generales */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor principal */
+main.container {
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px;
   flex: 1;
-  max-width: 800px; /* Ancho máximo del contenido */
-  width: 90%; /* Para que se adapte a pantallas pequeñas */
-  padding: 20px;
-  text-align: justify;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilos para el contenido principal */
+main h1, main h2, main h3, main h4, main h5, main h6, main p {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 40px;
+}
+
+main p {
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+main h1 {
+  margin-bottom: 30px;
+}
+
+main h2 {
+  margin: 40px auto 25px;
+}
+
+/* Asegurar que el contenido se centre en pantallas pequeñas */
+@media (max-width: 768px) {
+  main.container {
+    padding: 20px;
+  }
+  
+  main h1, main h2, main h3, main h4, main h5, main h6, main p {
+    padding: 0 20px;
+  }
+  
+  body {
+    padding: 0;
+  }
 }
 
 /* Estilos del encabezado */
 header {
-  background-color: #fdfaf3; /* Color de fondo */
-  text-align: center;
-  width: 90%; /* Ajuste del ancho */
-  max-width: 1000px; /* Ancho máximo */
+  background-color: var(--color-background);
   padding: 20px 0;
-  box-sizing: border-box;
 }
 
-/* Contenedor del header */
-.header-container {
+.header-container, .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Contenedor del logo y redes sociales */
 .logo-social-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Estilos del logo */
-.logo-container img {
-  max-width: 270px; /* Ajuste del tamaño del logo */
-  margin-left: 0;
+.nav {
+  display: flex;
+  gap: 40px;
 }
 
-/* Contenedor de los iconos de redes sociales */
+/* Estilos de enlaces */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Excepciones para navegación y footer */
+.nav a, .footer-menu a, .footer-policies a {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.nav a.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+  margin-top: 2px;
+}
+
+.footer-menu .active, .footer-menu a:hover, .footer-policies a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para enlaces de correo electrónico */
+a[href^="mailto:"] {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a[href^="mailto:"]:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para iconos sociales */
 .social-icons {
   display: flex;
-  justify-content: center;
-  gap: 10px; /* Espaciado entre iconos */
+  gap: 10px;
   margin-top: 10px;
+  justify-content: center;
 }
 
-/* Iconos de redes sociales */
 .social-icons a {
   font-size: 20px;
-  text-decoration: none;
-  color: #8B5E3C; /* Color de los iconos */
-}
-
-/* Estilos generales de los iconos */
-.icon {
-  text-decoration: none;
-  color: #8b5e34;
-  border: 1px solid #8b5e34;
-  border-radius: 50%; /* Forma redonda */
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
   width: 30px;
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
-/* Cambio de color al pasar el cursor sobre los iconos */
-.icon:hover {
-  background-color: #8b5e34;
+.social-icons a:hover {
+  background-color: var(--color-primary);
   color: white;
 }
 
-/* Barra de navegación */
-nav {
-  display: flex;
-  gap: 50px; /* Espaciado entre enlaces */
-  font-size: 20px;
-}
-
-/* Enlaces del menú */
-nav a {
-  text-decoration: none;
-  color: #8b5e34;
-  font-weight: bold;
-  position: relative;
-}
-
-/* Subrayado de enlace activo en la navegación */
-nav a.active::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #8b5e34;
-  margin-top: 2px;
-}
-
-/* Estilos del pie de página */
+/* Estilos del footer */
 footer {
-  background-color: #fdfaf3;
+  background-color: var(--color-background);
   text-align: center;
   padding: 40px 20px;
-  color: #8b5e34;
+  color: var(--color-primary);
 }
 
-/* Contenedor del footer */
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Logo del footer */
 .footer-logo img {
   max-width: 250px;
-  margin-bottom: 10px; /* Espacio entre logo y redes sociales */
 }
 
-/* Menús del footer */
 .footer-menu, .footer-policies {
   list-style: none;
   padding: 0;
@@ -145,100 +177,88 @@ footer {
   font-size: 14px;
 }
 
-/* Enlaces del menú del footer */
-.footer-menu a {
-  text-decoration: none;
-  color: #8b5e34;
-  font-weight: bold;
+.footer-copy {
+  font-size: 12px;
+  color: var(--color-primary);
+  margin-top: 20px;
+  text-align: center;
 }
 
-/* Subrayado de enlace activo en el menú del footer */
-.footer-menu .active {
-  text-decoration: underline;
-}
-
-/* Enlaces de políticas del footer */
-.footer-policies a {
-  color: #b79e82;
-  text-decoration: none;
-}
-
-/* Sección de contacto */
-.contacto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9f5ee;
-  padding: 60px 20px;
-}
-
-/* Contenedor de contacto */
+/* Sección contacto */
 .contacto-container {
-  display: flex;
   max-width: 900px;
-  width: 100%;
-  background: #f5e9dc;
+  background: var(--color-background);
   padding: 40px;
   border-radius: 10px;
+  margin: 0 auto;
 }
 
-/* Imagen en la sección de contacto */
 .contacto-img img {
-  width: 100%;
   max-width: 300px;
   border-radius: 10px;
 }
 
-/* Formulario de contacto */
-.contacto-form {
-  margin-left: 30px;
-  flex: 1;
-}
-
-/* Título del formulario de contacto */
-.contacto-form h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-}
-
-/* Botón de envío en el formulario de contacto */
-.contacto-form button {
-  background-color: #8c6239;
+/* Estilos de botones */
+.contacto-form button, .boton-newsletter {
+  background-color: var(--color-button);
   color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  margin-top: 15px;
-  font-size: 14px;
   text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
-/* Cambio de color al pasar el cursor sobre el botón */
-.contacto-form button:hover {
-  background-color: #7a5230;
+.contacto-form button:hover, .boton-newsletter:hover {
+  background-color: var(--color-primary);
 }
 
-/* Sección de la newsletter */
+/* Newsletter */
 .newsletter {
   text-align: center;
   padding: 40px 20px;
-  background-color: #f9f5ee;
-  margin-top: 40px;
+  background-color: var(--color-background);
+  margin: 0 auto;
 }
 
-/* Botón de suscripción a la newsletter */
-.boton-newsletter {
-  display: inline-block;
-  background-color: #8c6239;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+/* Estilos de tarjetas de post */
+.post-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.post-card {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  text-align: center;
+}
+
+.post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 15px;
+}
+
+.post-content h2 {
+  font-size: 18px;
+  color: var(--color-button);
+  margin: 0;
+}
+
+.post-content p {
   font-size: 14px;
-  text-transform: uppercase;
+  color: var(--color-text);
+  margin: 0;
 }
 
-/* Cambio de color al pasar el cursor sobre el botón de la newsletter */
-.boton-newsletter:hover {
-  background-color: #7a5230;
+.read-more {
+  color: #3b0d11;
+  font-weight: bold;
 }

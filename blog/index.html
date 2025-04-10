@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog Elena Lara</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
 <link rel="icon" href="/mi-pagina/assets/img/favicon_io/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="/mi-pagina/assets/css/style.css">
 <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
 <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-<!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/mi-pagina/assets/img/favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/mi-pagina/assets/img/favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/mi-pagina/assets/img/favicon_io/favicon-16x16.png">
@@ -25,59 +27,108 @@
       </div>
     
       <div class="social-icons">
-        <a href="#" class="icon twitter">&#xf099;</a> <!-- Twitter -->
-        <a href="#" class="icon instagram">&#xf16d;</a> <!-- Instagram -->
-        <a href="#" class="icon tiktok">&#xf3a9;</a> <!-- Tiktok -->
-        <a href="/mi-pagina/contacto/" class="icon mail">&#xf0e0;</a>
+        <a href="#" class="icon twitter">
+          <i class="fa-brands fa-twitter"></i> <!-- Twitter -->
+        </a>
+        <a href="#" class="icon instagram">
+          <i class="fa-brands fa-instagram"></i> <!-- Instagram -->
+        </a>
+        <a href="#" class="icon tiktok">
+          <i class="fa-brands fa-tiktok"></i> <!-- Tiktok -->
+        </a>
+        <a href="/mi-pagina/contacto/" class="icon mail">
+          <i class="fa-solid fa-envelope"></i> <!-- Correo -->
+        </a>
       </div>
     </div>
     
-    <nav>
-      <a href="/mi-pagina/">Inicio</a>
-      <a href="/mi-pagina/libros/">Libros</a>
-      <a href="/mi-pagina/sobre-mi/">Sobre mí</a>
-      <a href="/mi-pagina/blog/">Blog</a>
-      <a href="/mi-pagina/contacto/">Contacto</a>
-    </nav>    
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid justify-content-center">
+        <div class="navbar-nav">
+          <a class="nav-link " href="/mi-pagina/">Inicio</a>
+          <a class="nav-link " href="/mi-pagina/libros/">Libros</a>
+          <a class="nav-link " href="/mi-pagina/sobre-mi/">Sobre mí</a>
+          <a class="nav-link active" href="/mi-pagina/blog/">Blog</a>
+          <a class="nav-link " href="/mi-pagina/contacto/">Contacto</a>
+        </div>
+      </div>
+    </nav>
   </div>
 </header>
 
   <main>
-    <p>Este es mi blog</p>
+    <h2 id="novedades">NOVEDADES</h2>
+<hr />
+
+<div class="post-grid">
+  
+    <div class="post-card">
+      
+        <img src="/assets/imag/icon.png" alt="¡Nueva página web!" />
+      
+      <div class="post-content">
+        <h2><a href="/mi-pagina/nueva-pagina-web/">¡Nueva página web!</a></h2>
+        <p><p>¡Tengo página web! ¡Hecha por mí!</p>
+</p>
+        <a href="/mi-pagina/nueva-pagina-web/" class="read-more">Leer más »</a>
+      </div>
+    </div>
+  
+</div>
 
   </main>
 
-  <footer>
-  <div class="footer-container">
-    <!-- Logo con fuente manuscrita -->
-    <div class="footer-logo">
-      <img src="/mi-pagina/assets/img/logo.png" alt="Logo Elena Lara">
+  <footer class="bg-footer text-md-start">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+
+      <!-- Logo -->
+      <div class="col-12 mb-4">
+        <div class="d-flex justify-content-center gap-3 footer-logo">
+          <img src="/mi-pagina/assets/img/logo.png" alt="Logo Elena Lara";">
+        </div>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="col-12 mb-4">
+        <div class="d-flex justify-content-center gap-3 social-icons">
+          <a href="#" class="icon twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="icon instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="icon tiktok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="/mi-pagina/contacto/" class="icon mail"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <!-- Menú de navegación -->
+      <div class="col-12 mb-3">
+        <ul class="list-unstyled d-flex justify-content-center gap-3 footer-menu">
+          <li><a href="/mi-pagina/">Inicio</a></li>
+          <li><a href="/mi-pagina/libros/">Libros</a></li>
+          <li><a href="/mi-pagina/sobre-mi/">Sobre mí</a></li>
+          <li><a href="/mi-pagina/blog/">Blog</a></li>
+          <li><a href="/mi-pagina/contacto/">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Políticas -->
+      <div class="col-12">
+        <ul class="list-unstyled d-flex justify-content-center gap-3 footer-policies">
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Política de cookies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-copy mt-4">
+        &copy; 2025 Elena Lara. Todos los derechos reservados.
+      </div>
+      
     </div>
-    
-    <!-- Redes sociales -->
-    <div class="social-icons">
-      <a href="#" class="icon twitter">&#xf099;</a> <!-- Twitter -->
-        <a href="#" class="icon instagram">&#xf16d;</a> <!-- Instagram -->
-        <a href="#" class="icon tiktok">&#xf3a9;</a> <!-- Tiktok -->
-        <a href="/mi-pagina/contacto/" class="icon mail">&#xf0e0;</a>
-    </div>
-    
-    <!-- Menú de navegación -->
-    <ul class="footer-menu">
-      <li><a href="/mi-pagina/">Inicio</a></li>
-      <li><a href="/mi-pagina/libros/">Libros</a></li>
-      <li><a href="/mi-pagina/sobre-mi/">Sobre mí</a></li>
-      <li><a href="/mi-pagina/blog/">Blog</a></li>
-      <li><a href="/mi-pagina/contacto/">Contacto</a></li>
-    </ul>
-    
-    <!-- Políticas -->
-    <ul class="footer-policies">
-      <li><a href="#">Política de privacidad</a></li>
-      <li><a href="#">Aviso legal</a></li>
-      <li><a href="#">Política de cookies</a></li>
-    </ul>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </footer>
+
 </body>
 </html>
